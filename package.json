@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "npx prisma generate && npx prisma migrate dev --name init && npx tsnd --respawn --clear src/server.ts",
     "build": "rimraf dist && npx prisma generate && tsc && cp -r src/generated dist/",
+    "prestart": "npx prisma migrate deploy",
     "start": "node dist/server.js",
 
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,5 +1,6 @@
 ### REGISTRAR USUARIO
-POST http://localhost:3000/auth/register
+# POST http://localhost:3000/auth/register
+POST https://node-auth-jwt-api-rest-ts.onrender.com/auth/register
 Content-Type: application/json
 
 {
