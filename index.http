@@ -1,0 +1,45 @@
+### REGISTRAR USUARIO
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "email": "jose@example.com",
+  "password": "123456"
+}
+
+
+### LOGUEARSE CON EL USUARIO
+# @name login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "maria@example.com",
+  "password": "123456"
+}
+
+
+### MOSTRAR TODOS LOS USUARIOS
+GET http://localhost:3000/user
+Authorization: Bearer {{login.response.body.token}}
+
+
+### MOSTRAR SOLO UN USUARIO POR ID
+GET http://localhost:3000/user/1
+Authorization: Bearer {{login.response.body.token}}
+
+
+### ACTUALIZAR USUARIO
+PUT http://localhost:3000/user/1
+Authorization: Bearer {{login.response.body.token}}
+Content-Type: application/json
+
+{
+  "email": "camilita@example.com",
+  "password": "123456"
+}
+
+
+### ELIMINAR USUARIO
+DELETE http://localhost:3000/user/6
+Authorization: Bearer {{login.response.body.token}}
