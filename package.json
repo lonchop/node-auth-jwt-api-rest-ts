@@ -5,12 +5,11 @@
   "license": "ISC",
   "author": "Orangel Gonzalez",
   "type": "commonjs",
-  "main": "src/app.js",
+  "main": "dist/server.js",
   "scripts": {
     "dev": "npx prisma generate && npx prisma migrate dev --name init && npx tsnd --respawn --clear src/server.ts",
     "build": "rimraf dist && tsc",
     "start": "node dist/server.js",
-
 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
